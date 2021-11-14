@@ -1,4 +1,8 @@
 import math
+def rounding(n):
+    if n - math.floor(n) < 0.5:
+        return math.floor(n)
+    return math.ceil(n)
 
 def gradeF(grade):
     if grade >= 97 and grade <= 100:
@@ -42,6 +46,6 @@ def gradeF(grade):
                                             print("Description: Failure")
 
 gradeV = float(input("Insert grade: "))
-gradeVRounded = math.ceil(gradeV)
+gradeRounded = rounding(gradeV)
 
-gradeF(gradeVRounded)
+gradeF(gradeRounded)
